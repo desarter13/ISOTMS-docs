@@ -94,7 +94,7 @@ Click **Save**:
 
 You will then be redirected to your main account dashboard.
 
-![Password filled](../../images/monitor-dashboard.png)
+![Monitor Dashboard](../../images/monitor-dashboard.png)
 
 </details>
 
@@ -108,13 +108,33 @@ Before you start goalcheck you need to mark all attendances. Click on the Attend
 
 ![Password filled](../../images/attendance-button-zoom-in.png)
 
+AFter you click it, you will the similar screen
 
+![Password filled](../../images/attendance.png)
 
+Mark the right status for each student.
+
+![Password filled](../../images/attendance-statuses.png)
+
+Present - 
+Absent - 
+Tardy - 
+Ill - 
+Unset - 
+
+After you finish it click on the Student List on the left, right under Goal Check tab ![Password filled](../../images/goal-check-button.png) to continue with the goalcheck. 
 </details>
 
 ---
 <details>
 <summary><strong>Step 2 — Goalcheck </strong></summary>
+After you clicked on the Student List, you will see the list of students. 
+
+![Password filled](../../images/goal-check-report-student-list.png)
+
+If you click on the Options button in the right corner you will see the list of all options for view in the student list
+
+![Password filled](../../images/goal-check-report-student-list-options.png)
 
 
 
