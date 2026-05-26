@@ -1,72 +1,131 @@
-# Quick Guide
+# isotms.ru — Quick Guide
 
-This Quick Guide is designed to help you quickly understand the main functions of the school website isotms.ru.
-
-## STMS Description
-
-isotms is designed to help you monitor your child’s academic progress on a daily basis. At this stage of development, you can view attendance, grades, and disciplinary issues related to your child or children.
+A quick start guide for accessing and using the isotms school monitoring system.
 
 ---
 
-## First Login
+## Overview
 
-To access isotms.ru, click the following link:
+isotms helps parents monitor a student’s academic progress on a daily basis.  
+At the current stage, the system provides access to:
+
+- Attendance tracking  
+- Grades overview  
+- Disciplinary records  
+
+---
+
+## Getting Started
+
+<details>
+<summary><strong>Step 1 — Open the platform</strong></summary>
+
+Click the link below:
 
 <a href="https://isotms.ru" 
-   style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
-  isotms.ru
+   style="display:inline-block;
+          background-color:#007bff;
+          color:white;
+          padding:10px 16px;
+          text-decoration:none;
+          border-radius:6px;
+          border:1px solid #0056b3;">
+  Go to isotms.ru
 </a>
 
-Alternatively, enter **isotms.ru** directly into your browser’s address bar.
+Or enter manually in your browser:
 
-After opening the site, you should see the following screen:
+isotms.ru
+
+
+</details>
+
+---
+
+<details>
+<summary><strong>Step 2 — Login screen</strong></summary>
+
+After opening the site, you will see the login page:
 
 ![Login screen](../images/login-screen-empty.png)
 
-For successful login, focus on the following area:
+Focus on the login area:
 
-![Login screen](../images/login-and-password-empty-zoom-in.png)
+![Login area](../images/login-and-password-empty-zoom-in.png)
 
-In the **login field**:
-
-![Login screen](../images/login-field-empty.png)
-
-enter the login provided in the email you received.
-
-In the next field:
-
-![Login screen](../images/Password-field-empty.png)
-
-enter the temporary password:
-
-**11111111**
-
-(This is eight ones. We strongly recommend changing it after your first login.)
-
-After completing these steps, both fields should be filled with your login and temporary password, as shown below:
-
-![Login screen](../images/login-password-filled-zoom-in.png)
-
-After clicking the button:
-
-![Login screen](../images/let's-go-button.png)
-
-you will be redirected to the password change page.
-
-![Login screen](../images/new-password-confirm-empty-zoom-in.png)
-
-Enter your new password and repeat it in the field below. Both fields are required.
-
-![Login screen](../images/new-password-confirm-filled-zoom-in.png)
-
-After clicking the **Save** button:
-
-![Login screen](../images/SAVE-button.png)
-
-you will be redirected to your account’s main page.
+</details>
 
 ---
 
-## Main Account Page
+<details>
+<summary><strong>Step 3 — Enter credentials</strong></summary>
 
-On the main page, you can access key information regarding your child’s school activity, including attendance records, grades, and general academic updates.
+In the **login field**, enter the login provided in your registration email:
+
+![Login field](../images/login-field-empty.png)
+
+In the **password field**, enter the temporary password:
+
+11111111
+
+
+(This is a temporary password consisting of eight ones. It should be changed after first login.)
+
+Password field reference:
+
+![Password field](../images/Password-field-empty.png)
+
+After filling both fields, the form should look like this:
+
+![Filled login form](../images/login-password-filled-zoom-in.png)
+
+</details>
+
+---
+
+<details>
+<summary><strong>Step 4 — First login and password change</strong></summary>
+
+Click the login button:
+
+![Login button](../images/let's-go-button.png)
+
+You will be redirected to the password change screen:
+
+![Password change](../images/new-password-confirm-empty-zoom-in.png)
+
+Enter a new password and confirm it in the second field.
+
+Both fields must match.
+
+After filling in:
+
+![Password filled](../images/new-password-confirm-filled-zoom-in.png)
+
+Click **Save**:
+
+![Save button](../images/SAVE-button.png)
+
+You will then be redirected to your main account dashboard.
+
+</details>
+
+---
+
+## Main Dashboard
+
+After successful login, you will have access to your account dashboard.
+
+Here you can view:
+
+- Attendance records  
+- Academic performance  
+- General school-related updates for your child  
+
+---
+
+## Notes
+
+- Keep your credentials secure  
+- Change the temporary password immediately after first login  
+- If access issues occur, contact school administration
