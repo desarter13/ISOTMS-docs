@@ -122,7 +122,7 @@ Tardy -
 Ill - 
 Unset - 
 
-After you finish it click on the Student List on the left, right under Goal Check tab ![Password filled](../../images/goal-check-button.png) to continue with the goalcheck. 
+After you finish it click on the Student List on the left, right under Goal Check tab ![Password filled](../../images/Goal-check-button.png) to continue with the goalcheck. 
 </details>
 
 ---
@@ -136,6 +136,14 @@ If you click on the Options button in the right corner you will see the list of 
 
 ![Password filled](../../images/goal-check-report-student-list-options.png)
 
+First four checkboxes allow you to view correspondent to their names information
+next option will allow you to show either all students irrespective of their attendance status or the students who are present and tardy.
+and the last option will allow you to view students either in alphabetical order or in the order you have set before. 
+
+if you choose all possible options your student list will look like this
+
+
+![Password filled](../../images/goal-check-report-student-list-options-all-on.png)
 
 
 </details>
