@@ -1,6 +1,7 @@
-# ISOTMS-docs
+# ISOTMS-docs 
 Repository for manual on how to use [isotms.ru](https://isotms.ru/) 
-
+<a href="https://isotms.ru/" target="_blank" rel="noopener noreferrer">
+</a>
 ## ISOTMS Overview
 
 
