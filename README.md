@@ -23,7 +23,9 @@ In the quick guides section down below there are getting started instruction for
 
 [Quick Guide for students](students/Quick-Guide.md)
 
-[Quick Guide for teachers](docs/teacher/Quick-Guide.md)
+[Quick Guide for monitors](docs/teacher/Monitor-Quick-Guide.md)
+
+[Quick Guide for monitors](docs/teacher/Supervisor-Quick-Guide.md)
 
 
 
