@@ -60,7 +60,7 @@ Focus on the login area:
 <details>
 <summary><strong>Step 3 — Enter credentials</strong></summary>
 
-In the **login field**, enter the login provided in your registration email:
+In the **login field**, enter the login provided in your registration letter:
 
 ![Login field](../images/login-field-empty.png)
 
