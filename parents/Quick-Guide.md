@@ -116,11 +116,88 @@ You will then be redirected to your main account dashboard.
 
 After successful login, you will have access to your account dashboard.
 
+
+(dashboard screenshot)
+
 Here you can view:
 
 - Attendance records  
 - Academic performance  
 - General school-related updates for your child  
+- DIsciplinary issues if any
+
+At attendance tab 
+
+(attendance screenshot) 
+
+you can view the attendace of your child for the current day
+Below attendance on the left
+
+(HW screenshot)
+
+there wil be homework that he/she had set previously today.
+
+Next section to the right of HW is congratulations slips
+
+(congratulation screenshot)
+
+, there will be any congratulations that your child received at the current day. There will be subject and score of the test
+
+to the right of it there will be all demerits that your child have received today
+
+(demerit screenshot)
+
+You will see the reason and how many
+And finally to the right of demerits you could see detention slip
+
+
+(detention screenshot)
+
+You will see what were reasons, how many minutes and waht date your child need s to serve this detention.
+
+If you want to receive more indepth information please click on 
+
+(more info screenshot)
+
+
+
+## Main tabs
+
+Here you can see 5 main tabs
+
+(5 main tabs screen shot)
+
+Home work
+attendance
+honor roll
+progress reports
+traits
+
+<details>
+<summary><strong>Home Work</strong></summary>
+
+</details>
+
+
+<details>
+<summary><strong>Attendance</strong></summary>
+
+</details>
+
+   <details>
+<summary><strong>Honor Roll</strong></summary>
+
+</details>
+
+<details>
+<summary><strong>Progress Reportk</strong></summary>
+
+</details>
+
+<details>
+<summary><strong>Traits</strong></summary>
+
+</details>
 
 ---
 
