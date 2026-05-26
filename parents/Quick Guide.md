@@ -1,48 +1,72 @@
 # Quick Guide
 
-This Quick Guide нужен для того чтобы вы могли быстро разобраться с основными функциями школьного сайта isotms.ru
+This Quick Guide is designed to help you quickly understand the main functions of the school website isotms.ru.
 
 ## STMS Description
 
-isotms нужен для того, чтобы вы могли ежедневно следить за успехами своего ребенка в школе. На данном этапе разработки вы можете просматривать посещениеб оценкиб дисциплинарные  проблемы своего или своих детей
+isotms is designed to help you monitor your child’s academic progress on a daily basis. At this stage of development, you can view attendance, grades, and disciplinary issues related to your child or children.
 
 ---
 
-## первый запуск
+## First Login
 
-Чтобы запустить isotms.ru нажмите на эту <a href="https://isotms.ru" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
-  ссылку isotms.ru
-</a> или вбейте в ствроку браузера isotms.ru 
-После перехода вы должны увидеть следующее окно
+To access isotms.ru, click the following link:
+
+<a href="https://isotms.ru" 
+   style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
+  isotms.ru
+</a>
+
+Alternatively, enter **isotms.ru** directly into your browser’s address bar.
+
+After opening the site, you should see the following screen:
+
 ![Login screen](../images/login-screen-empty.png)
 
-Для успешного входа мы будем работать со следующей областью
+For successful login, focus on the following area:
 
 ![Login screen](../images/login-and-password-empty-zoom-in.png)
 
-в поле логин
-![Login screen](../images/login-field-empty.png)
-вбейте логин, указанный в полученном вами письме
+In the **login field**:
 
-в следующем поле ![Login screen](../images/Password-field-empty.png)
-в качестве пароля вбейте 
-11111111
-Это 8 единиц, временный пароль, который мы рекомендуем сменить. После всех проделанных операций оба поля должны быть заполненны вашим логином и временным паролем и будет выглядеть похожим на следующий скриншот
+![Login screen](../images/login-field-empty.png)
+
+enter the login provided in the email you received.
+
+In the next field:
+
+![Login screen](../images/Password-field-empty.png)
+
+enter the temporary password:
+
+**11111111**
+
+(This is eight ones. We strongly recommend changing it after your first login.)
+
+After completing these steps, both fields should be filled with your login and temporary password, as shown below:
 
 ![Login screen](../images/login-password-filled-zoom-in.png)
 
+After clicking the button:
 
-После клика на ![Login screen](../images/let's-go-button.png) вы попадете на страницу смены пароля.
+![Login screen](../images/let's-go-button.png)
+
+you will be redirected to the password change page.
 
 ![Login screen](../images/new-password-confirm-empty-zoom-in.png)
 
-Вбейте новый пароль и повторите ео в поле ниже. Оба поля должны быть заполнены!
+Enter your new password and repeat it in the field below. Both fields are required.
 
 ![Login screen](../images/new-password-confirm-filled-zoom-in.png)
 
+After clicking the **Save** button:
 
-После клика на кнопку ![Login screen](../images/SAVE-button.png) вы окажетесь на главной странице вашего аккаунта.
+![Login screen](../images/SAVE-button.png)
 
-## Главная Страница Аккаунта
-На главной странице вы можете получить доступ к основной информации касательно школьной дейятельности вашего ребенка. 
+you will be redirected to your account’s main page.
 
+---
+
+## Main Account Page
+
+On the main page, you can access key information regarding your child’s school activity, including attendance records, grades, and general academic updates.
