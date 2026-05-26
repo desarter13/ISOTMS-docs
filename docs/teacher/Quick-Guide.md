@@ -31,11 +31,11 @@ isotms.ru
 
 After opening the site, you will see the login page:
 
-![Login screen](../images/login-screen-empty.png)
+![Login screen](../../images/login-screen-empty.png)
 
 Focus on the login area:
 
-![Login area](../images/login-and-password-empty-zoom-in.png)
+![Login area](../../images/login-and-password-empty-zoom-in.png)
 
 </details>
 
@@ -46,7 +46,7 @@ Focus on the login area:
 
 In the **login field**, enter the login provided by administration:
 
-![Login field](../images/login-field-empty.png)
+![Login field](../../images/login-field-empty.png)
 
 In the **password field**, enter the temporary password:
 
@@ -57,11 +57,11 @@ In the **password field**, enter the temporary password:
 
 Password field reference:
 
-![Password field](../images/Password-field-empty.png)
+![Password field](../../images/Password-field-empty.png)
 
 After filling both fields, the form should look like this:
 
-![Filled login form](../images/login-password-filled-zoom-in.png)
+![Filled login form](../../images/login-password-filled-zoom-in.png)
 
 </details>
 
@@ -72,11 +72,11 @@ After filling both fields, the form should look like this:
 
 Click the login button:
 
-![Login button](../images/let's-go-button.png)
+![Login button](../../images/let's-go-button.png)
 
 You will be redirected to the password change screen:
 
-![Password change](../images/new-password-confirm-empty-zoom-in.png)
+![Password change](../../images/new-password-confirm-empty-zoom-in.png)
 
 Enter a new password and confirm it in the second field.
 
@@ -84,7 +84,7 @@ Both fields must match.
 
 After filling in:
 
-![Password filled](../images/new-password-confirm-filled-zoom-in.png)
+![Password filled](../../images/new-password-confirm-filled-zoom-in.png)
 
 Click **Save**:
 
