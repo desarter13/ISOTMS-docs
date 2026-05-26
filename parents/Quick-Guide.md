@@ -185,7 +185,7 @@ The Detention section displays disciplinary detentions assigned to your child. I
 
 ### More Information
 
-To access more detailed information, click the **More Info** button.
+To access more detailed information, click the [**More Info**](https://isotms.ru/family/student) button.
 
 *(more info screenshot)*
 
