@@ -100,50 +100,63 @@ You will then be redirected to your main account dashboard.
 
 ---
 
-## Main Activities During the Day 
+## Main Activities During the Day
 
 <details>
 <summary><strong>Step 1 — Attendance</strong></summary>
-Before you start goalcheck you need to mark all attendances. Click on the Attendance button on the left
 
-![Password filled](../../images/attendance-button-zoom-in.png)
+Before starting the Goal Check process, all student attendance records must be completed. To do this, click the **Attendance** button located in the left navigation panel.
 
-AFter you click it, you will the similar screen
+![Attendance button](../../images/attendance-button-zoom-in.png)
 
-![Password filled](../../images/attendance.png)
+After opening the Attendance section, you will see the attendance management screen.
 
-Mark the right status for each student.
+![Attendance screen](../../images/attendance.png)
 
-![Password filled](../../images/attendance-statuses.png)
+Select the appropriate attendance status for each student.
 
-Present - 
-Absent - 
-Tardy - 
-Ill - 
-Unset - 
+![Attendance statuses](../../images/attendance-statuses.png)
 
-After you finish it click on the Student List on the left, right under Goal Check tab ![Password filled](../../images/Goal-check-button.png) to continue with the goalcheck. 
+- **Present** — Student is present in class.
+- **Absent** — Student is not present.
+- **Tardy** — Student arrived late.
+- **Ill** — Student is absent due to illness.
+- **Unset** — Attendance status has not been assigned.
+
+After completing attendance, click **Student List** in the left navigation panel, located under the **Goal Check** section, to continue with the Goal Check process.
+
+![Goal Check button](../../images/Goal-check-button.png)
+
 </details>
 
 ---
+
 <details>
-<summary><strong>Step 2 — Goalcheck </strong></summary>
-After you clicked on the Student List, you will see the list of students. 
+<summary><strong>Step 2 — Goal Check</strong></summary>
 
-![Password filled](../../images/goal-check-report-student-list.png)
+After opening the **Student List**, you will see the list of all students assigned to your class.
 
-If you click on the Options button in the right corner you will see the list of all options for view in the student list
+![Student list](../../images/goal-check-report-student-list.png)
 
-![Password filled](../../images/goal-check-report-student-list-options.png)
+Click the **Options** button in the upper-right corner to open the display configuration menu.
 
-First four checkboxes allow you to view correspondent to their names information
-next option will allow you to show either all students irrespective of their attendance status or the students who are present and tardy.
-and the last option will allow you to view students either in alphabetical order or in the order you have set before. 
+![Student list options](../../images/goal-check-report-student-list-options.png)
 
-if you choose all possible options your student list will look like this
+The first four checkboxes control which student information is displayed in the list.
 
+The next option allows you to choose whether to display:
+- all students, regardless of attendance status, or
+- only students marked as **Present** or **Tardy**.
 
-![Password filled](../../images/goal-check-report-student-list-options-all-on.png)
+The final option controls the sorting method of the student list:
+- alphabetical order, or
+- a custom order previously configured in the system.
+
+When all display options are enabled, the student list will appear similar to the example below.
+
+![All options enabled](../../images/goal-check-report-student-list-options-all-on.png)
+
+</details>
 
 
 </details>
