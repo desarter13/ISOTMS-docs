@@ -7,3 +7,11 @@ Repository for manual on how to use [isotms.ru](https://isotms.ru/)
 
 ## Quick Guides
 
+Quick Guide for parents - link
+Quick Guide for students - link
+Quick Guide for tgeachers - link
+
+##
+
+
+
