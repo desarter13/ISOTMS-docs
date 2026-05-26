@@ -10,11 +10,9 @@ isotms нужен для того, чтобы вы могли ежедневно
 
 ## первый запуск
 
-Чтобы запустить isotms.ru нажмите на эту <a href="https://isotms.ru" style="text-decoration: none;">
-  <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-    кнопка isotms.ru
-  </button>
-</a> или вбейте в ствроку браузера isotms.ru 
+Чтобы запустить isotms.ru нажмите на эту <a href="https://isotms.ru" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; text-align: center;">
+  ссылку isotms.ru
+</a>или вбейте в ствроку браузера isotms.ru 
 После перехода вы должны увидеть следующее окно
 
 скриншот окна
