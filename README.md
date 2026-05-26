@@ -19,7 +19,7 @@ In the quick guides section down below there are getting started instruction for
 
 ## Quick Guides
 
-[Quick Guide for parents](../parents/Quick Guide.md)
+[Quick Guide for parents](parents/Quick-Guide)
 
 [Quick Guide for students](https://github.com/desarter13/ISOTMS-docs/blob/main/students/Quick%20Guide)
 
