@@ -112,97 +112,164 @@ You will then be redirected to your main account dashboard.
 
 ---
 
-## Main Dashboard
-
-After successful login, you will have access to your account dashboard.
-
-
-(dashboard screenshot)
-
-Here you can view:
-
-- Attendance records  
-- Academic performance  
-- General school-related updates for your child  
-- DIsciplinary issues if any
-
-At attendance tab 
-
-(attendance screenshot) 
-
-you can view the attendace of your child for the current day
-Below attendance on the left
-
-(HW screenshot)
-
-there wil be homework that he/she had set previously today.
-
-Next section to the right of HW is congratulations slips
-
-(congratulation screenshot)
-
-, there will be any congratulations that your child received at the current day. There will be subject and score of the test
-
-to the right of it there will be all demerits that your child have received today
-
-(demerit screenshot)
-
-You will see the reason and how many
-And finally to the right of demerits you could see detention slip
-
-
-(detention screenshot)
-
-You will see what were reasons, how many minutes and waht date your child need s to serve this detention.
-
-If you want to receive more indepth information please click on 
-
-(more info screenshot)
-
-
-
-## Main tabs
-
-Here you can see 5 main tabs
-
-(5 main tabs screen shot)
-
-Home work
-attendance
-honor roll
-progress reports
-traits
-
-<details>
-<summary><strong>Home Work</strong></summary>
-
-</details>
-
-
-<details>
-<summary><strong>Attendance</strong></summary>
-
-</details>
-
-   <details>
-<summary><strong>Honor Roll</strong></summary>
-
-</details>
-
-<details>
-<summary><strong>Progress Reportk</strong></summary>
-
-</details>
-
-<details>
-<summary><strong>Traits</strong></summary>
-
-</details>
-
----
-
 ## Notes
 
 - Keep your credentials secure  
 - Change the temporary password immediately after first login  
 - If access issues occur, contact school administration
+
+---
+
+
+## Main Dashboard
+
+After a successful login, you will have access to the main dashboard of your account.
+
+*(dashboard screenshot)*
+
+The dashboard provides a quick overview of your child’s daily academic and behavioral activity. Here you can view:
+
+- Attendance records
+- Academic performance
+- Homework assignments
+- Congratulations slips
+- Demerits and disciplinary notices
+- General school-related updates
+
+---
+
+### Attendance
+
+*(attendance screenshot)*
+
+The Attendance section displays your child’s attendance status for the current day.
+
+---
+
+### Homework
+
+*(HW screenshot)*
+
+Below the Attendance section, you can find the homework assignments that were issued for the current day.
+
+---
+
+### Congratulations Slips
+
+*(congratulation screenshot)*
+
+The Congratulations section displays any positive recognitions received by your child during the day. This may include completed tests, achievements, or outstanding academic performance. The subject and score will also be displayed.
+
+---
+
+### Demerits
+
+*(demerit screenshot)*
+
+This section displays any demerits received during the day. You will be able to see:
+- the reason for the demerit
+- the number of demerits assigned
+
+---
+
+### Detention Slips
+
+*(detention screenshot)*
+
+The Detention section displays disciplinary detentions assigned to your child. Information includes:
+- the reason for the detention
+- the detention duration in minutes
+- the scheduled detention date
+
+---
+
+### More Information
+
+To access more detailed information, click the **More Info** button.
+
+*(more info screenshot)*
+
+---
+
+# Main Tabs
+
+The system contains five main sections available through the navigation tabs.
+
+*(5 main tabs screenshot)*
+
+- Homework
+- Attendance
+- Honor Roll
+- Progress Reports
+- Traits
+
+---
+
+<details>
+<summary><strong>Homework</strong></summary>
+
+*(page screenshot)*
+
+This section allows you to view homework assignments for both the current day and previous days.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Attendance</strong></summary>
+
+*(attendance screenshot)*
+
+This section provides a complete attendance history for the current academic year.
+
+*(attendance statuses screenshot)*
+
+- **Present** — Student is present in class.
+- **Absent** — Student is not present.
+- **Tardy** — Student arrived late.
+- **Ill** — Student is absent due to illness.
+- **Unset** — Attendance status has not been assigned.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Honor Roll</strong></summary>
+
+*(Honor Roll screenshot)*
+
+This section displays all four Honor Roll categories and the student’s academic achievements.
+
+*(Honor Roll slip zoom-in screenshot)*
+
+The numbers displayed after each subject represent PACEs that must be completed by the student. If a number is crossed out, it indicates that the corresponding test has already been completed.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Progress Reports</strong></summary>
+
+This section provides detailed academic results for your child’s PACEs and assessments.
+
+You may:
+- view individual quarters separately
+- review the full academic year report
+- see calculated average scores at the end of each report
+
+</details>
+
+---
+
+<details>
+<summary><strong>Traits</strong></summary>
+
+*(Traits screenshot)*
+
+This section displays evaluations made by the supervisor regarding different areas of the student’s character, behavior, and personal development.
+
+</details>
+
