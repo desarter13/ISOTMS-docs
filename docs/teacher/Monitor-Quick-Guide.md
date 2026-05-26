@@ -1,5 +1,7 @@
 
-## Getting Started
+# Getting Started
+
+## Sign in
 
 <details>
 <summary><strong>Step 1 — Open the platform</strong></summary>
@@ -88,10 +90,34 @@ After filling in:
 
 Click **Save**:
 
-![Save button](../images/SAVE-button.png)
+![Save button](../../images/SAVE-button.png)
 
 You will then be redirected to your main account dashboard.
+
+![Password filled](../../images/monitor-dashboard.png)
 
 </details>
 
 ---
+
+## Main Activities During the Day 
+
+<details>
+<summary><strong>Step 1 — Attendance</strong></summary>
+Before you start goalcheck you need to mark all attendances. Click on the Attendance button on the left
+
+![Password filled](../../images/attendance-button-zoom-in.png)
+
+
+
+</details>
+
+---
+<details>
+<summary><strong>Step 2 — Goalcheck </strong></summary>
+
+
+
+</details>
+
+
