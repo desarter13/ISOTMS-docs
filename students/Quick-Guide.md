@@ -117,14 +117,19 @@ You will then be redirected to your main account dashboard.
 
 After successful login, you will have access to your account dashboard.
 
-Here you can view:
+Here you can view
+
+COngartulations demerits and detentions
 
 - Attendance records  
 - Academic performance  
-- General school-related updates for your child  
+- Homewrok
 
 ---
 
+## Home work
+
+to record your Home work you nee dto enter the first and the last page you want to set as your HW. You can either set the whole goal or just pages that left. You need to set pages несмогтря на то что там может быть check up или self test. (мы не ставим станицы относящиеся к лабораторным работам и wisdom pages in english PACE) 
 ## Notes
 
 - Keep your credentials secure  
