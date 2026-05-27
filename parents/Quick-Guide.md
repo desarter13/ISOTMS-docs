@@ -125,7 +125,7 @@ You will then be redirected to your main account dashboard.
 
 After a successful login, you will have access to the main dashboard of your account.
 
-*(dashboard screenshot)*
+![Save button](../images/parent/parent-dashboard.png)
 
 The dashboard provides a quick overview of your child’s daily academic and behavioral activity. Here you can view:
 
@@ -140,7 +140,7 @@ The dashboard provides a quick overview of your child’s daily academic and beh
 
 ### Attendance
 
-*(attendance screenshot)*
+![Save button](../images/parent/parent-dashboard-attendance-zoom.png)
 
 The Attendance section displays your child’s attendance status for the current day.
 
@@ -148,7 +148,7 @@ The Attendance section displays your child’s attendance status for the current
 
 ### Homework
 
-*(HW screenshot)*
+![Save button](../images/parent/parent-dashboard-HW-zoom.png)
 
 Below the Attendance section, you can find the homework assignments that were issued for the current day.
 
@@ -156,7 +156,7 @@ Below the Attendance section, you can find the homework assignments that were is
 
 ### Congratulations Slips
 
-*(congratulation screenshot)*
+![Save button](../images/parent/parent-dashboard-congratulations-zoom.png)
 
 The Congratulations section displays any positive recognitions received by your child during the day. This may include completed tests, achievements, or outstanding academic performance. The subject and score will also be displayed.
 
@@ -164,7 +164,7 @@ The Congratulations section displays any positive recognitions received by your 
 
 ### Demerits
 
-*(demerit screenshot)*
+![Save button](../images/parent/parent-dashboard-demerit-zoom.png)
 
 This section displays any demerits received during the day. You will be able to see:
 - the reason for the demerit
@@ -174,7 +174,7 @@ This section displays any demerits received during the day. You will be able to 
 
 ### Detention Slips
 
-*(detention screenshot)*
+![Save button](../images/parent/parent-dashboard-DTN-zoom.png)
 
 The Detention section displays disciplinary detentions assigned to your child. Information includes:
 - the reason for the detention
@@ -187,7 +187,7 @@ The Detention section displays disciplinary detentions assigned to your child. I
 
 To access more detailed information, click the **More Info** button.
 
-*(more info screenshot)*
+![Save button](../images/parent/parent-dashboard-more-info-zoom.png)
 
 ---
 
@@ -195,7 +195,7 @@ To access more detailed information, click the **More Info** button.
 
 The system contains five main sections available through the navigation tabs.
 
-*(5 main tabs screenshot)*
+![Save button](../images/parent/parent-dashboard-more-info-main-tabs-zoom.png)
 
 - Homework
 - Attendance
