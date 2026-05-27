@@ -1,8 +1,8 @@
-# ISOTMS-docs 
+# ISOTMS-docs WIP!
 Repository for manual on how to use [isotms.ru](https://isotms.ru/) 
 <a href="https://isotms.ru/" target="_blank" rel="noopener noreferrer">
 </a>
-## ISOTMS Overview
+## ISOTMS Overview WIP!
 
 
 STMS is a centralized school management system designed to integrate academic administration, student tracking, behavioral monitoring, and institutional reporting into a single platform. It supports the daily operational needs of educational staff by combining student records, attendance, performance evaluation, discipline management, and curriculum tracking within one unified interface.
@@ -18,15 +18,15 @@ Finally, STMS provides statistical and analytical tools that summarize student p
 In the quick guides section down below there are getting started instruction for main participants of educational process teachers, parents and students
 
 
-## Quick Guides
+## Quick Guides WIP!
 
-[Quick Guide for parents](parents/Quick-Guide.md)
+WIP! [Quick Guide for parents](parents/Quick-Guide.md)
 
-[Quick Guide for students](students/Quick-Guide.md)
+WIP! [Quick Guide for students](students/Quick-Guide.md)
 
-[Quick Guide for monitors](docs/teacher/Monitor-Quick-Guide.md)
+WIP! [Quick Guide for monitors](docs/teacher/Monitor-Quick-Guide.md)
 
-[Quick Guide for monitors](docs/teacher/Supervisor-Quick-Guide.md)
+WIP! [Quick Guide for monitors](docs/teacher/Supervisor-Quick-Guide.md)
 
 
 
