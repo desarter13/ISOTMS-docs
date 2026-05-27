@@ -125,22 +125,22 @@ You will then be redirected to your main account dashboard.
 
 After a successful login, you will have access to the main dashboard of your account.
 
-![Save button](../images/parent/parent-dashboard.png)
+![Parent Dashboard](../images/parent/parent-dashboard.png)
 
 The dashboard provides a quick overview of your child’s daily academic and behavioral activity. Here you can view:
 
-- Attendance records
-- Academic performance
-- Homework assignments
-- Congratulations slips
-- Demerits and disciplinary notices
-- General school-related updates
+* Attendance records
+* Academic performance
+* Homework assignments
+* Congratulations slips
+* Demerits and disciplinary notices
+* General school‑related updates
 
 ---
 
 ### Attendance
 
-![Save button](../images/parent/parent-dashboard-attendance-zoom.png)
+![Attendance Section](../images/parent/parent-dashboard-attendance-zoom.png)
 
 The Attendance section displays your child’s attendance status for the current day.
 
@@ -148,7 +148,8 @@ The Attendance section displays your child’s attendance status for the current
 
 ### Homework
 
-![Save button](../images/parent/parent-dashboard-HW-zoom.png)
+![Homework Section](../images/parent/parent-dashboard-HW-zoom.png)
+
 
 Below the Attendance section, you can find the homework assignments that were issued for the current day.
 
@@ -156,7 +157,7 @@ Below the Attendance section, you can find the homework assignments that were is
 
 ### Congratulations Slips
 
-![Save button](../images/parent/parent-dashboard-congratulations-zoom.png)
+![Congratulations Section](../images/parent/parent-dashboard-congratulations-zoom.png)
 
 The Congratulations section displays any positive recognitions received by your child during the day. This may include completed tests, achievements, or outstanding academic performance. The subject and score will also be displayed.
 
@@ -164,22 +165,22 @@ The Congratulations section displays any positive recognitions received by your 
 
 ### Demerits
 
-![Save button](../images/parent/parent-dashboard-demerit-zoom.png)
+![Demerits Section](../images/parent/parent-dashboard-demerit-zoom.png)
 
 This section displays any demerits received during the day. You will be able to see:
-- the reason for the demerit
-- the number of demerits assigned
+* the reason for the demerit
+* the number of demerits assigned
 
 ---
 
 ### Detention Slips
 
-![Save button](../images/parent/parent-dashboard-DTN-zoom.png)
+![Detention Section](../images/parent/parent-dashboard-DTN-zoom.png)
 
 The Detention section displays disciplinary detentions assigned to your child. Information includes:
-- the reason for the detention
-- the detention duration in minutes
-- the scheduled detention date
+* the reason for the detention
+* the detention duration in minutes
+* the scheduled detention date
 
 ---
 
@@ -187,31 +188,33 @@ The Detention section displays disciplinary detentions assigned to your child. I
 
 To access more detailed information, click the **More Info** button.
 
-![Save button](../images/parent/parent-dashboard-more-info-zoom.png)
+![More Info Button](../images/parent/parent-dashboard-more-info-zoom.png)
 
 ---
 
-# Main Tabs
+## Main Tabs
 
 The system contains five main sections available through the navigation tabs.
 
-![Save button](../images/parent/parent-dashboard-more-info-main-tabs-zoom.png)
+![Main Tabs](../images/parent/parent-dashboard-more-info-main-tabs-zoom.png)
 
-- Homework
-- Attendance
-- Honor Roll
-- Progress Reports
-- Traits
+* Homework
+* Attendance
+* Honor Roll
+* Progress Reports
+* Traits
 
 ---
 
 <details>
 <summary><strong>Homework</strong></summary>
 
-*(page screenshot)*
+![Homework Details](../images/parent/parent-dashboard-more-info-HW.png)
 
 This section allows you to view homework assignments for both the current day and previous days.
 
+![Homework Assignment Details](../images/parent/parent-dashboard-more-info-HW-zoom.png)
+As you see in the picture above, you have a subject and corresponding pages that your child is supposed to do at home.
 </details>
 
 ---
@@ -219,17 +222,16 @@ This section allows you to view homework assignments for both the current day an
 <details>
 <summary><strong>Attendance</strong></summary>
 
-*(attendance screenshot)*
+![Attendance Details](../images/parent/parent-dashboard-more-info-attendance-zoom.png)
 
-This section provides a complete attendance history for the current academic year.
+This section provides a complete attendance history for the current academic year. In the left corner you will see the legend for the colour code.
 
-*(attendance statuses screenshot)*
+![Attendance Legend](../images/parent/parent-dashboard-more-info-attendance-zoom-in.png)
 
-- **Present** : Student is present in class.
-- **Absent** : Student is not present.
-- **Tardy** : Student arrived late.
-- **Ill** : Student is absent due to illness.
-- **Unset** : Attendance status has not been assigned.
+* **Present**: Student is present in class.
+* **Absent**: Student is not present.
+* **Tardy**: Student arrived late.
+* **Ill**: Student is absent due to illness.
 
 </details>
 
@@ -238,14 +240,13 @@ This section provides a complete attendance history for the current academic yea
 <details>
 <summary><strong>Honor Roll</strong></summary>
 
-*(Honor Roll screenshot)*
+![Honor Roll Overview](../images/parent/parent-dashboard-more-info-HR.png)
 
 This section displays all four Honor Roll categories and the student’s academic achievements.
 
-*(Honor Roll slip zoom-in screenshot)*
+![Honor Roll Marks](../images/parent/parent-dashboard-more-info-HR-marks-zoom.png)
 
 The numbers displayed after each subject represent PACEs that must be completed by the student. If a number is crossed out, it indicates that the corresponding test has already been completed.
-
 </details>
 
 ---
@@ -255,11 +256,11 @@ The numbers displayed after each subject represent PACEs that must be completed 
 
 This section provides detailed academic results for your child’s PACEs and assessments.
 
+![Progress Report](../images/parent/parent-dashboard-more-info-progress-report.png)
 You may:
-- view individual quarters separately
-- review the full academic year report
-- see calculated average scores at the end of each report
-
+* view individual quarters separately
+* review the full academic year report
+* see calculated average scores at the end of each report
 </details>
 
 ---
@@ -267,9 +268,11 @@ You may:
 <details>
 <summary><strong>Traits</strong></summary>
 
-*(Traits screenshot)*
+
+![Traits Overview](../images/parent/parent-dashboard-more-info-traits.png)
 
 This section displays evaluations made by the supervisor regarding different areas of the student’s character, behavior, and personal development.
 
 </details>
+
 
