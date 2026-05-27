@@ -225,11 +225,11 @@ This section provides a complete attendance history for the current academic yea
 
 *(attendance statuses screenshot)*
 
-- **Present** — Student is present in class.
-- **Absent** — Student is not present.
-- **Tardy** — Student arrived late.
-- **Ill** — Student is absent due to illness.
-- **Unset** — Attendance status has not been assigned.
+- **Present** : Student is present in class.
+- **Absent** : Student is not present.
+- **Tardy** : Student arrived late.
+- **Ill** : Student is absent due to illness.
+- **Unset** : Attendance status has not been assigned.
 
 </details>
 
