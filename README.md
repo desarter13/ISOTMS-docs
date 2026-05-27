@@ -26,7 +26,7 @@ WIP! [Quick Guide for students](students/Quick-Guide.md)
 
 WIP! [Quick Guide for monitors](docs/teacher/Monitor-Quick-Guide.md)
 
-WIP! [Quick Guide for monitors](docs/teacher/Supervisor-Quick-Guide.md)
+WIP! [Quick Guide for supervisors](docs/teacher/Supervisor-Quick-Guide.md)
 
 
 
