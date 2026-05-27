@@ -256,7 +256,7 @@ The numbers displayed after each subject represent PACEs that must be completed 
 
 This section provides detailed academic results for your child’s PACEs and assessments.
 
-![Progress Report](../images/parent/parent-dashboard-more-info-progress-report.png)
+![Progress Report](../images/parent/parent-dashboard-more-info-progrees-report.png)
 You may:
 * view individual quarters separately
 * review the full academic year report
