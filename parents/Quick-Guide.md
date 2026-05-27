@@ -206,8 +206,7 @@ The system contains five main sections available through the navigation tabs.
 
 ---
 
-<details>
-<summary><strong>Homework</strong></summary>
+#### Homework
 
 ![Homework Details](../images/parent/parent-dashboard-more-info-HW.png)
 
@@ -215,12 +214,11 @@ This section allows you to view homework assignments for both the current day an
 
 ![Homework Assignment Details](../images/parent/parent-dashboard-more-info-HW-zoom.png)
 As you see in the picture above, you have a subject and corresponding pages that your child is supposed to do at home.
-</details>
+
 
 ---
 
-<details>
-<summary><strong>Attendance</strong></summary>
+#### Attendance
 
 ![Attendance Details](../images/parent/parent-dashboard-more-info-attendance-zoom.png)
 
@@ -233,12 +231,11 @@ This section provides a complete attendance history for the current academic yea
 * **Tardy**: Student arrived late.
 * **Ill**: Student is absent due to illness.
 
-</details>
+
 
 ---
 
-<details>
-<summary><strong>Honor Roll</strong></summary>
+#### Honor Roll
 
 ![Honor Roll Overview](../images/parent/parent-dashboard-more-info-HR.png)
 
@@ -247,12 +244,11 @@ This section displays all four Honor Roll categories and the student’s academi
 ![Honor Roll Marks](../images/parent/parent-dashboard-more-info-HR-marks-zoom.png)
 
 The numbers displayed after each subject represent PACEs that must be completed by the student. If a number is crossed out, it indicates that the corresponding test has already been completed.
-</details>
+
 
 ---
 
-<details>
-<summary><strong>Progress Reports</strong></summary>
+#### Progress Reports
 
 This section provides detailed academic results for your child’s PACEs and assessments.
 
@@ -261,18 +257,16 @@ You may:
 * view individual quarters separately
 * review the full academic year report
 * see calculated average scores at the end of each report
-</details>
+
 
 ---
 
-<details>
-<summary><strong>Traits</strong></summary>
-
+#### Traits
 
 ![Traits Overview](../images/parent/parent-dashboard-more-info-traits.png)
 
 This section displays evaluations made by the supervisor regarding different areas of the student’s character, behavior, and personal development.
 
-</details>
+
 
 
