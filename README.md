@@ -30,7 +30,14 @@ WIP! [Quick Guide for monitors](docs/teacher/Supervisor-Quick-Guide.md)
 
 
 
-##
+## Feedback form
 
-
+There is a link for feedback form. If you want to report any problem, you have a question or you have a suggestion please fill it.
+<div align="center">
+  <a href="https://forms.yandex.ru/u/69df67e802848f1d45cf4030" target="_blank">
+    <button style="padding: 10px 20px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+      📋 Fill the Form
+    </button>
+  </a>
+</div>
 
