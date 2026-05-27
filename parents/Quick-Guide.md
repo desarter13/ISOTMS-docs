@@ -17,8 +17,7 @@ At the current stage, the system provides access to:
 
 ## Getting Started
 
-<details>
-<summary><strong>Step 1 — Open the platform</strong></summary>
+#### Step 1 — Open the platform
 
 Click the link below:
 
@@ -38,12 +37,11 @@ Or enter manually in your browser:
 isotms.ru
 
 
-</details>
+
 
 ---
 
-<details>
-<summary><strong>Step 2 — Login screen</strong></summary>
+#### Step 2 — Login screen
 
 After opening the site, you will see the login page:
 
@@ -53,12 +51,10 @@ Focus on the login area:
 
 ![Login area](../images/login-and-password-empty-zoom-in.png)
 
-</details>
 
 ---
 
-<details>
-<summary><strong>Step 3 — Enter credentials</strong></summary>
+#### Step 3 — Enter credentials
 
 In the **login field**, enter the login provided in your registration letter:
 
@@ -80,11 +76,9 @@ After filling both fields, the form should look like this:
 ![Filled login form](../images/login-password-filled-zoom-in.png)
 
 </details>
-
 ---
 
-<details>
-<summary><strong>Step 4 — First login and password change</strong></summary>
+#### Step 4 — First login and password change
 
 Click the login button:
 
@@ -108,7 +102,7 @@ Click **Save**:
 
 You will then be redirected to your main account dashboard.
 
-</details>
+
 
 ---
 
