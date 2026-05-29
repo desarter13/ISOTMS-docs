@@ -75,7 +75,7 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| name | String |  |
+| name | String | Название LC (Junior 1, Senior 1) осторожно пробелы!! |
 | user_id | Integer |  |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
@@ -199,56 +199,102 @@
 
 
 ## ER diagram
-STUDENT_YEARS (student_year_id)
-│
-├── ACADEMIC_YEARS (academic_year_id)
-│   │
-│   ├── ACADEMIC_PERIODS (academic_period_id)
-│   │   │
-│   │   └── ATTENDANCES (academic_period_id, student_year_id)
-│   │
-│   └── (обратная связь) STUDENT_YEARS
-│
-├── LEARNING_CENTERS (learning_center_id)
-│   │
-│   └── (обратная связь) STUDENT_YEARS
-│
-├── STUDENTS (student_id)
-│   │
-│   └── (обратная связь) STUDENT_YEARS
-│
-├── ATTENDANCES (student_year_id)
-│
-├── GOAL_CHECK_DAYS (student_year_id)
-│   │
-│   └── GOAL_CHECK_DAY_SUBJECTS (goal_check_day_id)
-│       │
-│       └── STUDENT_SUBJECTS (student_subject_id)
-│           │
-│           ├── SUBJECTS (subject_id)
-│           │   │
-│           │   ├── SUBJECT_PACES (subject_id)
-│           │   │
-│           │   └── SUBJECT_TYPES (subject_type_id)
-│           │       │
-│           │       └── (обратная связь) STUDENT_SUBJECTS
-│           │
-│           └── STUDENT_PACES (student_subject_id)
-│
-├── HONOR_ROLLS (student_year_id)
-│   │
-│   ├── ACADEMIC_PERIODS (academic_period_id)  [через связь с ACADEMIC_YEARS]
-│   │
-│   └── (обратная связь) STUDENT_YEARS
-│
-└── STUDENT_SUBJECTS (student_year_id)
-    │
-    ├── SUBJECTS (subject_id)
-    │   │
-    │   ├── SUBJECT_PACES (subject_id)
-    │   │
-    │   └── SUBJECT_TYPES (subject_type_id)
-    │
-    ├── GOAL_CHECK_DAY_SUBJECTS (student_subject_id)
-    │
-    └── STUDENT_PACES (student_subject_id)
+```mermaid
+erDiagram
+    STUDENT_YEARS ||--o{ ACADEMIC_YEARS : "academic_year_id"
+    STUDENT_YEARS ||--o{ LEARNING_CENTERS : "learning_center_id"
+    STUDENT_YEARS ||--|| STUDENTS : "student_id"
+    STUDENT_YEARS ||--o{ ATTENDANCES : "student_year_id"
+    STUDENT_YEARS ||--o{ GOAL_CHECK_DAYS : "student_year_id"
+    STUDENT_YEARS ||--o{ HONOR_ROLLS : "student_year_id"
+    STUDENT_YEARS ||--o{ STUDENT_SUBJECTS : "student_year_id"
+
+    GOAL_CHECK_DAYS ||--o{ GOAL_CHECK_DAY_SUBJECTS : "goal_check_day_id"
+
+    STUDENT_SUBJECTS ||--o{ SUBJECTS : "subject_id"
+    STUDENT_SUBJECTS ||--o{ GOAL_CHECK_DAY_SUBJECTS : "student_subject_id"
+    STUDENT_SUBJECTS ||--o{ STUDENT_PACES : "student_subject_id"
+
+    SUBJECTS ||--o{ SUBJECT_PACES : "subject_id"
+    SUBJECTS ||--|| SUBJECT_TYPES : "subject_type_id"
+
+    ACADEMIC_YEARS ||--o{ ACADEMIC_PERIODS : "academic_year_id"
+    ACADEMIC_PERIODS ||--o{ ATTENDANCES : "academic_period_id"
+    HONOR_ROLLS ||--o{ ACADEMIC_PERIODS : "academic_period_id"
+
+    ACADEMIC_YEARS {
+        Integer id
+        Integer period_type
+        Integer academic_year_id
+    }
+
+    ACADEMIC_PERIODS {
+        Integer id
+        Integer academic_year_id
+    }
+
+    ATTENDANCES {
+        Integer id
+        Integer academic_period_id
+        Integer student_year_id
+    }
+
+    GOAL_CHECK_DAY_SUBJECTS {
+        Integer id
+        Integer student_subject_id
+        Integer goal_check_day_id
+    }
+
+    GOAL_CHECK_DAYS {
+        Integer id
+        Integer student_year_id
+    }
+
+    LEARNING_CENTERS {
+        Integer id
+    }
+
+    STUDENT_SUBJECTS {
+        Integer id
+        Integer subject_type_id
+        Integer subject_id
+        Integer student_year_id
+    }
+
+    STUDENT_YEARS {
+        Integer id
+        Integer academic_year_id
+        Integer learning_center_id
+        Integer student_id
+    }
+
+    STUDENTS {
+        Integer id
+    }
+
+    SUBJECT_PACES {
+        Integer id
+        Integer subject_id
+    }
+
+    SUBJECT_TYPES {
+        Integer id
+    }
+
+    SUBJECTS {
+        Integer id
+        Integer subject_type_id
+    }
+
+    HONOR_ROLLS {
+        Integer id
+        Integer student_year_id
+        Integer academic_period_id
+    }
+
+    STUDENT_PACES {
+        Integer id
+        Integer student_subject_id
+    }
+
+```
