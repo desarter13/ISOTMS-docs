@@ -36,19 +36,19 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| home_work | Integer | состояния (их больше двух?): здесь и ниже у них три состояния, поэтому тип — число, а не 1/0 |
-| reapeated_goals | Integer | состояния (их больше двух?) |
-| checkout | Integer | состояния (их больше двух?) |
-| selftest | Integer | состояния (их больше двух?) |
-| test | Integer | состояния (их больше двух?) |
-| vocabulary | Integer | состояния (их больше двух?) |
+| home_work | Integer | нету — 0, есть — 1, выполнено — 2 |
+| reapeated_goals | Integer | число дней которые ученик повторяет цель для предмета |
+| checkout | Integer | нету — 0, есть — 1, выполнено — 2 |
+| selftest | Integer | нету — 0, есть — 1, выполнено — 2 |
+| test | Integer | нету — 0, есть — 1, выполнено — 2 |
+| vocabulary | Integer | нету — 0, есть — 1, выполнено — 2 |
 | rules | Integer | нету — 0, есть — 1, выполнено — 2 |
 | comment | String | строка, в которую помещается коммент |
 | student_subject_id | Integer | id из таблицы student_subject |
 | goal_check_day_id | Integer | id из таблицы goal_check_day |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| status | Integer | статус предмета для зелёной точки |
+| status | Integer | статус предмета для зелёной точки 0 - нет зеленой точки, 1 - есть зеленая точка|
 
 ### goal_check_days
 | Имя | Тип | Описание |
@@ -92,37 +92,37 @@
 | subject_id | Integer | id из таблицы subject |
 | student_year_id | Integer | id из таблицы student_year |
 | total | Fractional number | среднее за предмет |
-| created_at | Date and time | техническая инфа |
-| updated_at | Date and time | техническая инфа |
+| created_at | Date and time | дата создания записи |
+| updated_at | Date and time | дата последнего обновления |
 | status | Integer | 0 — активен, 1 — закончен |
 
 ### student_years
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| level | String |  |
-| status | String |  |
-| academic_year_id | Integer |  |
-| learning_center_id | Integer |  |
-| student_id | Integer |  |
+| level | String | Уровень, который должен быть у студента по возрасту |
+| status | String | ?????? |
+| academic_year_id | Integer |  id из таблицы academic_years |
+| learning_center_id | Integer | id из таблицы learning_centers |
+| student_id | Integer | id из таблицы students |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| current_level | Integer |  |
-| current_math_level | Integer |  |
-| grade_level | Integer |  |
-| sort_order | Integer |  |
+| current_level | Integer | уровень, который в данный момент у студента без математики |
+| current_math_level | Integer | уровень студента по математике |
+| grade_level | Integer | уровень согласно русской программе |
+| sort_order | Integer | число для сортировки для GoalCheck |
 
 ### students
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| user_id | Integer |  |
-| family_id | Integer |  |
-| country_id | Integer |  |
-| first_name | String |  |
-| middle_name | String |  |
-| last_name | String |  |
-| birthdate | Date |  |
+| user_id | Integer | id пользователя, который ее занес  |
+| family_id | Integer | id семь |
+| country_id | Integer | id страны |
+| first_name | String | Имя  |
+| middle_name | String | Отчество |
+| last_name | String | Фамилия  |
+| birthdate | Date | Дата рождения  |
 | gender | Integer |  |
 | email | String |  |
 | status | Integer | статус студента (выключается после withdrawal) |
@@ -196,3 +196,59 @@
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | is_pace | Integer | флаг, указывающий, относится ли запись к темпу обучения (0 — нет, 1 — да) |
+
+
+## ER diagram
+STUDENT_YEARS (student_year_id)
+│
+├── ACADEMIC_YEARS (academic_year_id)
+│   │
+│   ├── ACADEMIC_PERIODS (academic_period_id)
+│   │   │
+│   │   └── ATTENDANCES (academic_period_id, student_year_id)
+│   │
+│   └── (обратная связь) STUDENT_YEARS
+│
+├── LEARNING_CENTERS (learning_center_id)
+│   │
+│   └── (обратная связь) STUDENT_YEARS
+│
+├── STUDENTS (student_id)
+│   │
+│   └── (обратная связь) STUDENT_YEARS
+│
+├── ATTENDANCES (student_year_id)
+│
+├── GOAL_CHECK_DAYS (student_year_id)
+│   │
+│   └── GOAL_CHECK_DAY_SUBJECTS (goal_check_day_id)
+│       │
+│       └── STUDENT_SUBJECTS (student_subject_id)
+│           │
+│           ├── SUBJECTS (subject_id)
+│           │   │
+│           │   ├── SUBJECT_PACES (subject_id)
+│           │   │
+│           │   └── SUBJECT_TYPES (subject_type_id)
+│           │       │
+│           │       └── (обратная связь) STUDENT_SUBJECTS
+│           │
+│           └── STUDENT_PACES (student_subject_id)
+│
+├── HONOR_ROLLS (student_year_id)
+│   │
+│   ├── ACADEMIC_PERIODS (academic_period_id)  [через связь с ACADEMIC_YEARS]
+│   │
+│   └── (обратная связь) STUDENT_YEARS
+│
+└── STUDENT_SUBJECTS (student_year_id)
+    │
+    ├── SUBJECTS (subject_id)
+    │   │
+    │   ├── SUBJECT_PACES (subject_id)
+    │   │
+    │   └── SUBJECT_TYPES (subject_type_id)
+    │
+    ├── GOAL_CHECK_DAY_SUBJECTS (student_subject_id)
+    │
+    └── STUDENT_PACES (student_subject_id)
