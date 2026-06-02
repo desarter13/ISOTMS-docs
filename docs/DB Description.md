@@ -133,9 +133,9 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| subject_id | Integer |  |
-| number | Integer |  |
-| pages | Integer |  |
+| subject_id | Integer | id из таблицы subjects  |
+| number | Integer | порядковый номер PACE в курсе начинается с 1001 и заканчивается 1138(хотя могут быть и совершенно другие номера в старых предметах)  |
+| pages | Integer | количество страниц в PACE (для учета в Goal Check)|
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 
@@ -143,15 +143,15 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| name | String |  |
-| color | String |  |
-| sort_order | Integer |  |
+| name | String | Имя типа предмета |
+| color | String | цвет |
+| sort_order | Integer | номер для сортировки |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| short_name | String |  |
-| pace_sort_order | Integer |  |
+| short_name | String | краткое имя |
+| pace_sort_order | Integer | номер для сортировки в Goal Check |
 
-### Subjects
+### subjects
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
