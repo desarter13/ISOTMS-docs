@@ -69,7 +69,7 @@
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | date | Date | Дата, к которой относится запись |
-| detention_date | Date |  |
+| detention_date | Date | Дата в которую студент должен исполнить detention  |
 
 ### learning_centers
 | Имя | Тип | Описание |
@@ -155,7 +155,7 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| subject_type_id | Integer |  |
+| subject_type_id | Integer | id из таблицы subject_types |
 | name | String | Имя предмета |
 | gpa_weight | Fractional number | вес для GPA |
 | start_pace | Integer | номер первого PACE в курсе (как правило их 12) |
@@ -172,17 +172,17 @@
 ### honor_rolls
 | Имя | Тип | Описание |
 |-------|-------|-------|
-| name | String |  |
-| id | Integer |  |
+| name | String | ?????????????????? |
+| id | Integer |id строки в данной таблице  |
 | student_year_id | Integer  |  |
 | academic_period_id | Integer |  |
-| date | Date and time |  |
-| status | Integer |  |
-| created_at | Date and time  |  |
-| updated_at | Date and time  |  |
-| on_off |  Integer|  |
-| total_pages | Integer  |  |
-| done_pages | Integer |  |
+| date | Date and time | Дата окончания  |
+| status | Integer | ??????????????????? |
+| created_at | Date and time  | дата создания записи |
+| updated_at | Date and time  | дата последнего обновления |
+| on_off |  Integer| 1 - включен 0 - выключен???????????? |
+| total_pages | Integer  | Всего страниц |
+| done_pages | Integer | Сколько старниц закончено (по goalcheck) |
 
 ### student_paces
 | Имя | Тип | Описание |
