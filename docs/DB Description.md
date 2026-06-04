@@ -76,13 +76,13 @@
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
 | name | String | Название LC (Junior 1, Senior 1) осторожно пробелы!! |
-| user_id | Integer |  |
+| user_id | Integer | id пользователя, который является супервайзером??????????? |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | type | Integer | Default, Kindergarten, ABC, Junior, Primary, Senior |
 | based_type | Integer | Campus-based, Homeschooling, Distant |
-| demerit_type | Integer |  |
-| sort_order | Integer |  |
+| demerit_type | Integer | senior,junior  |
+| sort_order | Integer | число для соритровки |
 
 ### student_subjects
 | Имя | Тип | Описание |
@@ -117,14 +117,14 @@
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
 | user_id | Integer | id пользователя, который ее занес  |
-| family_id | Integer | id семь |
+| family_id | Integer | id семьи |
 | country_id | Integer | id страны |
 | first_name | String | Имя  |
 | middle_name | String | Отчество |
 | last_name | String | Фамилия  |
 | birthdate | Date | Дата рождения  |
-| gender | Integer |  |
-| email | String |  |
+| gender | Integer | пол |
+| email | String | email |
 | status | Integer | статус студента (выключается после withdrawal) |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
@@ -156,17 +156,17 @@
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
 | subject_type_id | Integer |  |
-| name | String |  |
-| gpa_weight | Fractional number |  |
-| start_pace | Integer |  |
-| finish_pace | Integer |  |
-| level | String |  |
-| is_pace | Integer |  |
-| is_class | Integer |  |
+| name | String | Имя предмета |
+| gpa_weight | Fractional number | вес для GPA |
+| start_pace | Integer | номер первого PACE в курсе (как правило их 12) |
+| finish_pace | Integer | Номер последнего PACE в курсе  |
+| level | String | уровень курса |
+| is_pace | Integer | является ли PACE или преподается в классно-урочной |
+| is_class | Integer | является ли классноурочной???????????? |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | diploma_level | String | ????? |
-| level_number | Integer |  |
+| level_number | Integer | ???????????? |
 | count_for_level | Integer | числовое значение level |
 
 ### honor_rolls
