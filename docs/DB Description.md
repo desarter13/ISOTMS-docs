@@ -172,17 +172,17 @@
 ### honor_rolls
 | Имя | Тип | Описание |
 |-------|-------|-------|
-| name |  |  |
-| id |  |  |
-| student_year_id |  |  |
-| academic_period_id |  |  |
-| date |  |  |
-| status |  |  |
-| created_at |  |  |
-| updated_at |  |  |
-| on_off |  |  |
-| total_pages |  |  |
-| done_pages |  |  |
+| name | String |  |
+| id | Integer |  |
+| student_year_id | Integer  |  |
+| academic_period_id | Integer |  |
+| date | Date and time |  |
+| status | Integer |  |
+| created_at | Date and time  |  |
+| updated_at | Date and time  |  |
+| on_off |  Integer|  |
+| total_pages | Integer  |  |
+| done_pages | Integer |  |
 
 ### student_paces
 | Имя | Тип | Описание |
