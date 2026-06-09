@@ -100,7 +100,7 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| level | String | Уровень, который должен быть у студента по возрасту |
+| level | Integer | Уровень, который должен быть у студента по возрасту |
 | status | String | ?????? |
 | academic_year_id | Integer |  id из таблицы academic_years |
 | learning_center_id | Integer | id из таблицы learning_centers |
