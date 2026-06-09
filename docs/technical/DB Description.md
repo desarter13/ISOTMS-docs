@@ -177,7 +177,7 @@
 | student_year_id | Integer  |  |
 | academic_period_id | Integer |  |
 | date | Date and time | Дата окончания  |
-| status | Integer | ??????????????????? |
+| status | Integer | 0 - new, 1 - confirmed, 2 - done, 3  - not done |
 | created_at | Date and time  | дата создания записи |
 | updated_at | Date and time  | дата последнего обновления |
 | on_off |  Integer| 1 - включен 0 - выключен???????????? |
