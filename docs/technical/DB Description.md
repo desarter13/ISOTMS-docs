@@ -190,7 +190,7 @@
 | id | Integer | id строки в данной таблице |
 | student_subject_id | Integer | id из таблицы student_subject |
 | number | Integer | номер PACEа|
-| result | Integer | результат выполнения (например, оценка или статус) |
+| result | Integer | результат выполнения (test score) |
 | date | Date | дата выполнения |
 | status | Integer | статус выполнения (0 — не выполнено, 1 — выполнено и т. д.) |
 | created_at | Date and time | дата создания записи |
