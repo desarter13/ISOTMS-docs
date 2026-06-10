@@ -64,7 +64,7 @@
 | completed_pages | Integer | количество законченных страниц |
 | set_pages | Integer | количество страниц, которые мы ставим на день |
 | projected_pages | Integer | количество страниц, которые бы надо сделать |
-| status | Integer | зелёная точка |
+| status | Integer | зелёная точка (0 и 1)|
 | set_pages_user_id | Integer | id пользователя из таблицы user |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
