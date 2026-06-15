@@ -197,6 +197,15 @@
 | updated_at | Date and time | дата последнего обновления |
 | is_pace | Integer | флаг, указывающий, является ли запись PACEом или нет (0 — нет, 1 — да) |
 
+### honor_roll_paces
+
+| Имя | Тип | Описание |
+|-------|------|-----------|
+| id | Integer | id строки в данной таблице |
+| honor_roll_id | Integer | id из таблицы honor_rolls |
+| student_pace_id | Integer | id из таблицы student_paces |
+| status | Integer | статус записи |
+| pages | Integer | количество страниц |
 
 ## ER diagram
 ```mermaid
@@ -220,12 +229,15 @@ erDiagram
 
     ACADEMIC_YEARS ||--o{ ACADEMIC_PERIODS : "academic_year_id"
     ACADEMIC_PERIODS ||--o{ ATTENDANCES : "academic_period_id"
+
     HONOR_ROLLS ||--o{ ACADEMIC_PERIODS : "academic_period_id"
+    HONOR_ROLLS ||--o{ HONOR_ROLL_PACES : "honor_roll_id"
+
+    STUDENT_PACES ||--o{ HONOR_ROLL_PACES : "student_pace_id"
 
     ACADEMIC_YEARS {
         Integer id
         Integer period_type
-        Integer academic_year_id
     }
 
     ACADEMIC_PERIODS {
@@ -239,15 +251,15 @@ erDiagram
         Integer student_year_id
     }
 
+    GOAL_CHECK_DAYS {
+        Integer id
+        Integer student_year_id
+    }
+
     GOAL_CHECK_DAY_SUBJECTS {
         Integer id
         Integer student_subject_id
         Integer goal_check_day_id
-    }
-
-    GOAL_CHECK_DAYS {
-        Integer id
-        Integer student_year_id
     }
 
     LEARNING_CENTERS {
@@ -272,18 +284,23 @@ erDiagram
         Integer id
     }
 
-    SUBJECT_PACES {
+    SUBJECTS {
         Integer id
-        Integer subject_id
+        Integer subject_type_id
     }
 
     SUBJECT_TYPES {
         Integer id
     }
 
-    SUBJECTS {
+    SUBJECT_PACES {
         Integer id
-        Integer subject_type_id
+        Integer subject_id
+    }
+
+    STUDENT_PACES {
+        Integer id
+        Integer student_subject_id
     }
 
     HONOR_ROLLS {
@@ -292,9 +309,10 @@ erDiagram
         Integer academic_period_id
     }
 
-    STUDENT_PACES {
+    HONOR_ROLL_PACES {
         Integer id
-        Integer student_subject_id
+        Integer honor_roll_id
+        Integer student_pace_id
     }
 
 ```
