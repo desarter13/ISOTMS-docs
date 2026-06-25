@@ -1,5 +1,5 @@
 # ISOTMS-docs WIP!
-Repository for manual on how to use [isotms.ru](https://isotms.ru/) 
+Repository for [manual](https://desarter13.github.io/ISOTMS-docs/) on how to use [isotms.ru](https://isotms.ru/) 
 <a href="https://isotms.ru/" target="_blank" rel="noopener noreferrer">
 </a>
 ## ISOTMS Overview WIP!
