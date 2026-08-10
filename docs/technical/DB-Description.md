@@ -48,7 +48,7 @@
 | goal_check_day_id | Integer | id из таблицы goal_check_day |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| status | Integer | статус предмета для зелёной точки 0 - нет зеленой точки, 1 - есть зеленая точка|
+| status | Integer | статус предмета для зелёной точки 0 - нет для зеленой точки, 1 - есть для зеленой точки|
 
 ### goal_check_days
 | Имя | Тип | Описание |
@@ -64,7 +64,7 @@
 | completed_pages | Integer | количество законченных страниц |
 | set_pages | Integer | количество страниц, которые мы ставим на день |
 | projected_pages | Integer | количество страниц, которые бы надо сделать |
-| status | Integer | зелёная точка (0 и 1)|
+| status | Integer | 1 -есть зеленая точка, 0 - нет зеленой точки|
 | set_pages_user_id | Integer | id пользователя из таблицы user |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
@@ -79,9 +79,9 @@
 | user_id | Integer | id пользователя, который является супервайзером??????????? |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| type | Integer | Default, Kindergarten, ABC, Junior, Primary, Senior |
-| based_type | Integer | Campus-based, Homeschooling, Distant |
-| demerit_type | Integer | senior,junior  |
+| type | Integer | ? - Default, ? -Kindergarten, ? -ABC, ? -Junior, ? -Primary, ? -Senior |
+| based_type | Integer | 0 - Campus-based, 1 - Homeschooling, 2 - Distant |
+| demerit_type | Integer | ? - senior,? - junior  |
 | sort_order | Integer | число для соритровки |
 
 ### student_subjects
@@ -109,14 +109,14 @@
 | updated_at | Date and time | дата последнего обновления |
 | current_level | Integer | уровень, который в данный момент у студента без математики |
 | current_math_level | Integer | уровень студента по математике |
-| grade_level | Integer | уровень согласно русской программе |
+| grade_level | Integer | уровень, который должен быть согласно русской программе |
 | sort_order | Integer | число для сортировки для GoalCheck |
 
 ### students
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| user_id | Integer | id пользователя, который ее занес  |
+| user_id | Integer |??????????????????? id пользователя, который ее занес  |
 | family_id | Integer | id семьи |
 | country_id | Integer | id страны |
 | first_name | String | Имя  |
@@ -158,11 +158,11 @@
 | subject_type_id | Integer | id из таблицы subject_types |
 | name | String | Имя предмета |
 | gpa_weight | Fractional number | вес для GPA |
-| start_pace | Integer | номер первого PACE в курсе (как правило их 12) |
-| finish_pace | Integer | Номер последнего PACE в курсе  |
+| start_pace | Integer | номер первого PACE в курсе (как правило их 12) ??????надо бы пример дать ???? |
+| finish_pace | Integer | ????? Номер последнего PACE в курсе  |
 | level | String | уровень курса |
-| is_pace | Integer | является ли PACE или преподается в классно-урочной |
-| is_class | Integer | является ли классноурочной???????????? |
+| is_pace | Integer | 0 - нет, 1 - да. является ли PACE|
+| is_class | Integer | ??????является ли классноурочной???????????? |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | diploma_level | String | ????? |
@@ -180,7 +180,7 @@
 | status | Integer | 0 - new, 1 - confirmed, 2 - done, 3  - not done |
 | created_at | Date and time  | дата создания записи |
 | updated_at | Date and time  | дата последнего обновления |
-| on_off |  Integer| 1 - включен 0 - выключен???????????? |
+| on_off |  Integer|?????????????? 1 - включен 0 - выключен???????????? |
 | total_pages | Integer  | Всего страниц |
 | done_pages | Integer | Сколько старниц закончено (по goalcheck) |
 
@@ -192,7 +192,7 @@
 | number | Integer | номер PACEа|
 | result | Integer | результат выполнения (test score) |
 | date | Date | дата выполнения |
-| status | Integer | статус выполнения (0 — не выполнено, 1 — выполнено и т. д.) |
+| status | Integer | статус выполнения (0 — не выполнено, 1 — выполнено и?????? т. д.????) |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | is_pace | Integer | флаг, указывающий, является ли запись PACEом или нет (0 — нет, 1 — да) |
@@ -204,7 +204,7 @@
 | id | Integer | id строки в данной таблице |
 | honor_roll_id | Integer | id из таблицы honor_rolls |
 | student_pace_id | Integer | id из таблицы student_paces |
-| status | Integer | статус записи |
+| status | Integer | ? - ??? |
 | pages | Integer | количество страниц |
 
 ### student_year_settings
@@ -219,7 +219,7 @@
 | `created_at` | DATETIME | Дата и время создания записи | 2023-10-05 08:00:14 |
 | `updated_at` | DATETIME | Дата и время последнего обновления записи | 2023-10-26 08:30:58 |
 | `class` | INT / VARCHAR | Класс или уровень обучения ученика по русской программе | 5, 6, 10... |
-| `grade_level` | INT | Академический уровень ученика нужен в том случае если он учится на русской программе| 5, 6, 10... |
+| `grade_level` | INT | Академический уровень (тот который должен быть) ученика нужен в том случае если он учится на русской программе| 5, 6, 10... |
 | `off_statistics` | BOOLEAN | Исключение ученика из статистических расчетов | 0 — участвует, 1 — исключен |
 | `iowa` | BOOLEAN | Признак подходит ли студент дляпрохождения тестирования Iowa | 0 — нет, 1 — да |
 | `iowa_level` | INT / VARCHAR | Уровень тестирования для Iowa | 1,2,3,5,6...|
