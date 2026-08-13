@@ -97,6 +97,7 @@
 | status | Integer | 0 — активен, 1 — закончен |
 
 ### student_years
+при написании запросов за прошлый год нужно обратить внимание, что при создании нового года sy id будет меняться, запросы нужно джойнить через таблицу students
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
@@ -224,7 +225,7 @@
 | `iowa` | BOOLEAN | Признак подходит ли студент дляпрохождения тестирования Iowa | 0 — нет, 1 — да |
 | `iowa_level` | INT / VARCHAR | Уровень тестирования для Iowa | 1,2,3,5,6...|
 
-## ER diagram
+## ER diagram OUTDATED !!!!
 ```mermaid
 erDiagram
     STUDENT_YEARS ||--o{ ACADEMIC_YEARS : "academic_year_id"
