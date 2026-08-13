@@ -60,8 +60,8 @@
 | id | Integer | id строки в данной таблице |
 | demerit | Integer | общее кол‑во за день |
 | demerit_confirmed | Integer | ???? |
-| attendance | Integer | думал перенести сюда, но потом оставил отдельной таблицей |
-| detention_completed | Integer |  |
+| attendance | Integer | не несет никакой осмысленной функции сейчас |
+| detention_completed | Integer | статус завершения detention?.??? |
 | student_year_id | Integer | id из таблицы student_year |
 | completed_pages | Integer | количество законченных страниц |
 | set_pages | Integer | количество страниц, которые мы ставим на день |
