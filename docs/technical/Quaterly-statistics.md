@@ -1,4 +1,4 @@
-# Quarterly Statistics Dashboard Description
+# OUTDATED !!!! WIP !!! Quarterly Statistics Dashboard Description OUTDATED !!!! WIP !!!
 
 Dashboard:
 https://datalens.yandex/app1gnnfg94cu
