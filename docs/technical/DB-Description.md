@@ -59,9 +59,9 @@
 | comment | String | текст коммента |
 | id | Integer | id строки в данной таблице |
 | demerit | Integer | общее кол‑во за день |
-| demerit_confirmed | Integer | ???? |
+| demerit_confirmed | Integer | подтверждение членом семьи 1 - подтверждено |
 | attendance | Integer | не несет никакой осмысленной функции сейчас |
-| detention_completed | Integer | статус завершения detention?.??? |
+| detention_completed | Integer | статус завершения detention 1 - detention завершено |
 | student_year_id | Integer | id из таблицы student_year |
 | completed_pages | Integer | количество законченных страниц |
 | set_pages | Integer | количество страниц, которые мы ставим на день |
@@ -78,7 +78,7 @@
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
 | name | String | Название LC (Junior 1, Senior 1) осторожно пробелы!! |
-| user_id | Integer | id пользователя, который является супервайзером??????????? |
+| user_id | Integer | id пользователя (для авторизации), который является супервайзером |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | type | Integer | ? - Default, ? -Kindergarten, ? -ABC, ? -Junior, ? -Primary, ? -Senior |
@@ -104,7 +104,7 @@
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
 | level | String | Уровень, который должен быть у студента по возрасту |
-| status | String | ?????? |
+| status | String | (устаревшее) могло использоваться для вкл/выкл |
 | academic_year_id | Integer |  id из таблицы academic_years |
 | learning_center_id | Integer | id из таблицы learning_centers |
 | student_id | Integer | id из таблицы students |
@@ -119,7 +119,7 @@
 | Имя | Тип | Описание |
 |-------|-------|-------|
 | id | Integer | id строки в данной таблице |
-| user_id | Integer |??????????????????? id пользователя, который ее занес  |
+| user_id | Integer | id пользователя (для авторизации) |
 | family_id | Integer | id семьи |
 | country_id | Integer | id страны |
 | first_name | String | Имя  |
@@ -165,17 +165,17 @@
 | finish_pace | Integer | ????? Номер последнего PACE в курсе  |
 | level | String | уровень курса |
 | is_pace | Integer | 0 - нет, 1 - да. является ли PACE|
-| is_class | Integer | ??????является ли классноурочной???????????? |
+| is_class | Integer | (устаревшее, NOT is_pace) является ли классноурочной |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| diploma_level | String | ????? |
-| level_number | Integer | ???????????? |
+| diploma_level | String | название для репорта High School Transcript |
+| level_number | Integer | (устаревшее) не используется |
 | count_for_level | Integer | числовое значение level |
 
 ### honor_rolls
 | Имя | Тип | Описание |
 |-------|-------|-------|
-| name | String | ?????????????????? |
+| name | String | (резерв) |
 | id | Integer |id строки в данной таблице  |
 | student_year_id | Integer  |  |
 | academic_period_id | Integer |  |
@@ -183,7 +183,7 @@
 | status | Integer | 0 - new, 1 - confirmed, 2 - done, 3  - not done |
 | created_at | Date and time  | дата создания записи |
 | updated_at | Date and time  | дата последнего обновления |
-| on_off |  Integer|?????????????? 1 - включен 0 - выключен???????????? |
+| on_off |  Integer| параметр для отключения HR 1 - включен 0 - выключен |
 | total_pages | Integer  | Всего страниц |
 | done_pages | Integer | Сколько старниц закончено (по goalcheck) |
 
@@ -195,7 +195,7 @@
 | number | Integer | номер PACEа|
 | result | Integer | результат выполнения (test score) |
 | date | Date | дата выполнения |
-| status | Integer | статус выполнения (0 — не выполнено, 1 — выполнено и?????? т. д.????) 3 - выполнен |
+| status | Integer | статус выполнения (0 — не выполнено, 1 — выполнено, 2 - провален,  3 - выполнен) |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
 | is_pace | Integer | флаг, указывающий, является ли запись PACEом или нет (0 — нет, 1 — да) |
@@ -207,7 +207,7 @@
 | id | Integer | id строки в данной таблице |
 | honor_roll_id | Integer | id из таблицы honor_rolls |
 | student_pace_id | Integer | id из таблицы student_paces |
-| status | Integer | ? - ??? |
+| status | Integer | статус выполнения 0 — не выполнено, 1 — выполнено |
 | pages | Integer | количество страниц |
 
 ### student_year_settings
