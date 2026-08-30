@@ -81,9 +81,9 @@
 | user_id | Integer | id пользователя (для авторизации), который является супервайзером |
 | created_at | Date and time | дата создания записи |
 | updated_at | Date and time | дата последнего обновления |
-| type | Integer | ? - Default, ? -Kindergarten, ? -ABC, ? -Junior, ? -Primary, ? -Senior |
+| type | Integer | 0 - Default, 1 -Kindergarten, 2 -ABC, 3 -Junior, 4 -Primary, 5 -Senior |
 | based_type | Integer | 0 - Campus-based, 1 - Homeschooling, 2 - Distant |
-| demerit_type | Integer | ? - senior,? - junior  |
+| demerit_type | Integer | 0 - senior,1 - junior  |
 | sort_order | Integer | число для соритровки |
 
 ### student_subjects
@@ -161,8 +161,8 @@
 | subject_type_id | Integer | id из таблицы subject_types |
 | name | String | Имя предмета |
 | gpa_weight | Fractional number | вес для GPA |
-| start_pace | Integer | номер первого PACE в курсе (как правило их 12) ??????надо бы пример дать ???? |
-| finish_pace | Integer | ????? Номер последнего PACE в курсе  |
+| start_pace | Integer | номер первого PACE в курсе (как правило их 12) 1001, 1013, 1025... |
+| finish_pace | Integer | Номер последнего PACE в курсе 1012, 1024, 1036... |
 | level | String | уровень курса |
 | is_pace | Integer | 0 - нет, 1 - да. является ли PACE|
 | is_class | Integer | (устаревшее, NOT is_pace) является ли классноурочной |
