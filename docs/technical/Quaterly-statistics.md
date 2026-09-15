@@ -1,158 +1,221 @@
 # OUTDATED !!!! WIP !!! Quarterly Statistics Dashboard Description OUTDATED !!!! WIP !!!
 
 Dashboard:
-https://datalens.yandex/app1gnnfg94cu
+[https://datalens.yandex/app1gnnfg94cu](https://datalens.yandex/app1gnnfg94cu?_share_link=public)
 
 ---
 
 # Dashboard Structure
+- 'Quaterly LC statistics'
+- 'Yearly Statistics'
+- 'Technical'
 
-## Selectors
-
-- `year_name`
-- `LC`
-- `HR_status`
 
 ---
 
-# LEFT SIDE WIDGETS
+# 'Quaterly LC statistics'
 
 ## 1. Total Students
 
 ```sql
 SELECT
-    COUNT(DISTINCT st.id) AS total_students,
-    lc.name AS LC,
+    lc.name AS lc,
     ay.name AS year_name,
-    ap.name AS academic_period_name
+
+    COUNT(DISTINCT sy.student_id) AS total_students
+
 FROM student_years sy
-JOIN students st ON st.id = sy.student_id
-JOIN academic_years ay ON ay.id = sy.academic_year_id
-JOIN learning_centers lc ON lc.id = sy.learning_center_id
-JOIN attendances a ON a.student_year_id = sy.id
-JOIN academic_periods ap ON ap.id = a.academic_period_id
-LEFT JOIN honor_rolls hr ON hr.student_year_id = sy.id
-WHERE ay.name = {{year_name}}
-  AND lc.name = {{LC}}
-  AND ap.name = 'Quarter 1'
-GROUP BY ap.name, lc.name, ay.name;
+
+JOIN students st
+    ON st.id = sy.student_id
+
+JOIN academic_years ay
+    ON ay.id = sy.academic_year_id
+
+JOIN learning_centers lc
+    ON lc.id = sy.learning_center_id
+
+JOIN attendances att
+    ON att.student_year_id = sy.id
+
+JOIN academic_periods ap
+    ON ap.id = att.academic_period_id
+
+WHERE
+    ay.name = {{year_name}}
+    AND lc.name = {{LC}}
+    AND ap.name = 'Quarter 1'
+
+GROUP BY
+    lc.name,
+    ay.name
 ```
 
 ## 2. Students for HR
 ```sql
 SELECT
-    COUNT(DISTINCT st.id) AS students_for_hr,
-    lc.name AS LC,
+    lc.name AS lc,
     ay.name AS year_name,
-    ap.name AS academic_period_name
+
+    COUNT(DISTINCT CASE WHEN hr.on_off = 1 THEN st.id END) AS students_with_on_off_1
+
 FROM student_years sy
-JOIN students st ON st.id = sy.student_id
-JOIN academic_years ay ON ay.id = sy.academic_year_id
-JOIN learning_centers lc ON lc.id = sy.learning_center_id
-JOIN attendances a ON a.student_year_id = sy.id
-JOIN academic_periods ap ON ap.id = a.academic_period_id
-LEFT JOIN honor_rolls hr ON hr.student_year_id = sy.id
-WHERE ay.name = {{year_name}}
-  AND lc.name = {{LC}}
-  AND ap.name = 'Quarter 1'
-  AND hr.on_off = 1
-GROUP BY ap.name, lc.name, ay.name;
+
+JOIN students st
+    ON st.id = sy.student_id
+
+JOIN academic_years ay
+    ON ay.id = sy.academic_year_id
+
+JOIN learning_centers lc
+    ON lc.id = sy.learning_center_id
+
+JOIN academic_periods ap
+    ON ap.academic_year_id = ay.id
+
+JOIN honor_rolls hr
+    ON hr.student_year_id = sy.id
+    AND hr.academic_period_id = ap.id
+
+WHERE
+    ay.name = {{year_name}}
+    AND lc.name = {{LC}}
+    AND ap.name = 'Quarter 1'
+
+GROUP BY
+    lc.name,
+    ay.name
 ```
 
 ## 3. Average Score
 ```sql
 SELECT
-    ap.name AS academic_period_name,
-    lc.name AS LC,
-    AVG(sp.result) AS average_grade
+    lc.name AS lc,
+    ay.name AS year_name,
+
+    AVG(sp.result) AS avg_test_result
+
 FROM student_paces sp
-JOIN student_subjects ss ON sp.student_subject_id = ss.id
-JOIN student_years sy ON ss.student_year_id = sy.id
-JOIN learning_centers lc ON sy.learning_center_id = lc.id
-JOIN attendances a ON sp.date = a.date
-    AND a.student_year_id = sy.id
-JOIN academic_periods ap ON a.academic_period_id = ap.id
-JOIN academic_years ay ON ap.academic_year_id = ay.id
-WHERE sp.is_pace = 1
-  AND sp.result IS NOT NULL
-  AND ay.name = {{year_name}}
-  AND lc.name = {{LC}}
-  AND ap.name = 'Quarter 4'
-GROUP BY ap.name, lc.name;
+
+JOIN student_subjects ss
+    ON ss.id = sp.student_subject_id
+
+JOIN student_years sy
+    ON sy.id = ss.student_year_id
+
+JOIN academic_years ay
+    ON ay.id = sy.academic_year_id
+
+JOIN learning_centers lc
+    ON lc.id = sy.learning_center_id
+
+JOIN academic_periods ap
+    ON ap.academic_year_id = ay.id
+    AND sp.date BETWEEN ap.start_date AND ap.finish_date
+
+WHERE
+    ay.name = {{year_name}}
+    AND lc.name = {{LC}}
+    AND ap.name = 'Quarter 1'
+    AND sp.is_pace = 1
+    AND sp.status IN (1, 3)
+    AND sp.result IS NOT NULL
+
+GROUP BY
+    lc.name,
+    ay.name
 ```
 
 ## 4. Average PACEs Done
 ```sql
-WITH base_paces AS (
-    SELECT
-        ap.id AS academic_period_id,
-        ap.name AS academic_period_name,
-        lc.name AS LC,
-        hrp.student_pace_id,
-        sy.student_id
-
-    FROM academic_periods ap
-
-    JOIN honor_rolls hr
-        ON hr.academic_period_id = ap.id
-
-    JOIN honor_roll_paces hrp
-        ON hrp.honor_roll_id = hr.id
-
-    JOIN student_paces sp
-        ON hrp.student_pace_id = sp.id
-
-    JOIN student_subjects ss
-        ON sp.student_subject_id = ss.id
-
-    JOIN student_years sy
-        ON ss.student_year_id = sy.id
-
-    JOIN learning_centers lc
-        ON sy.learning_center_id = lc.id
-
-    JOIN academic_years ay
-        ON sy.academic_year_id = ay.id
-
-    WHERE
-    hr.on_off = 1 
-    AND sp.is_pace = 1 
-    AND ay.name = {{year_name}} 
-    AND lc.name = {{LC}} 
-    AND sp.date BETWEEN ap.start_date AND ap.finish_date
-)
-
 SELECT
-    academic_period_name,
-    LC,
-    COUNT(DISTINCT student_pace_id) * 1.0 AS avg_paces_per_student
-
-FROM base_paces
-
-GROUP BY
-    academic_period_name,
-    LC
+    (SELECT COUNT(*)
+     FROM student_paces sp
+     JOIN student_subjects ss ON ss.id = sp.student_subject_id
+     JOIN student_years sy ON sy.id = ss.student_year_id
+     JOIN academic_years ay ON ay.id = sy.academic_year_id
+     JOIN learning_centers lc ON lc.id = sy.learning_center_id
+     JOIN academic_periods ap ON ap.academic_year_id = ay.id
+        AND sp.date BETWEEN ap.start_date AND ap.finish_date
+     WHERE ay.name = {{year_name}}
+       AND lc.name = {{LC}}
+       AND ap.name = 'Quarter 1'
+       AND sp.is_pace = 1
+       AND sp.status IN (1, 3)
+    )
+    /
+    (SELECT COUNT(DISTINCT sy.student_id)
+     FROM student_years sy
+     JOIN academic_years ay ON ay.id = sy.academic_year_id
+     JOIN learning_centers lc ON lc.id = sy.learning_center_id
+     JOIN attendances att ON att.student_year_id = sy.id
+     JOIN academic_periods ap ON ap.id = att.academic_period_id
+     WHERE ay.name = {{year_name}}
+       AND lc.name = {{LC}}
+       AND ap.name = 'Quarter 1'
+    ) AS avg_paces_per_student
 ```
+## 5. Total PACEs Done
+```sql
+SELECT
+    COUNT(*) AS total_paces
 
-# RIGHT SIDE WIDGETS
-## 5. HR Status by Quarters
+FROM student_paces sp
+
+JOIN student_subjects ss
+    ON ss.id = sp.student_subject_id
+
+JOIN student_years sy
+    ON sy.id = ss.student_year_id
+
+JOIN academic_years ay
+    ON ay.id = sy.academic_year_id
+
+JOIN learning_centers lc
+    ON lc.id = sy.learning_center_id
+
+JOIN academic_periods ap
+    ON ap.academic_year_id = ay.id
+    AND sp.date BETWEEN ap.start_date AND ap.finish_date
+
+WHERE
+    ay.name = {{year_name}}
+    AND lc.name = {{LC}}
+    AND ap.name = 'Quarter 1'
+    AND sp.is_pace = 1
+    AND sp.status IN (1, 3)
+```
+## 6. HR completion
 ```sql
 SELECT
     ay.name AS year_name,
     lc.name AS learning_center_name,
     ap.name AS academic_period_name,
 
-    COUNT(CASE WHEN hr.status = {{HR_status}} THEN 1 END)
-    / NULLIF(COUNT(DISTINCT sy.student_id), 0) AS honor_roll_percent
+    COUNT(DISTINCT CASE WHEN hr.on_off = 1 AND hr.status = {{HR_status}} THEN sy.student_id END) * 1.0
+    /
+    NULLIF(
+        COUNT(DISTINCT CASE WHEN hr.on_off = 1 THEN sy.student_id END),
+        0
+    ) AS honor_roll_percent
 
 FROM student_years sy
-JOIN students st ON st.id = sy.student_id
-JOIN academic_years ay ON ay.id = sy.academic_years_id
-JOIN learning_centers lc ON lc.id = sy.learning_center_id
-JOIN academic_periods ap ON ap.academic_years_id = ay.id
+
+JOIN students st
+    ON st.id = sy.student_id
+
+JOIN academic_years ay
+    ON ay.id = sy.academic_year_id
+
+JOIN learning_centers lc
+    ON lc.id = sy.learning_center_id
+
+JOIN academic_periods ap
+    ON ap.academic_year_id = ay.id
+
 LEFT JOIN honor_rolls hr
     ON hr.student_year_id = sy.id
-    AND hr.academic_period_id = ap.id
+   AND hr.academic_period_id = ap.id
 
 WHERE
     lc.name = {{LC}}
@@ -166,8 +229,7 @@ GROUP BY
 
 ORDER BY
     ap.start_date;
-```
-## 6. On Level by Quarters
--- TODO: define metric logic
+    ```sql
+---
 
 
