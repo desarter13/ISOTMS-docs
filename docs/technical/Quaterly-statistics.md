@@ -445,6 +445,48 @@ WHERE
 
 **Что получаем:** среднее число PACE на студента за год, но только среди студентов, выполнивших минимальный план (отсекаются те, кто набрал меньше `4 × min_paces_rus/eng` — то есть не дотянул до годовой нормы). Карточка "Average PACEs → All students" (71,93 в примере). ⚠️ Логика отличается от квартального расчёта (запрос №4 вкладки Quarterly) — там фильтра по минимуму нет, здесь есть.
 
+
+### Age Groups
+```sql
+SELECT
+    -- распределяем студентов по возрастным группам на возраст на 1 октября
+    -- (в БД для этого используется ay.start_date, т.к. учебный год стартует 1 октября)
+    COUNT(DISTINCT CASE WHEN age_years <= 3 THEN student_id END) AS preschool_3_or_younger,
+    COUNT(DISTINCT CASE WHEN age_years BETWEEN 4 AND 5 THEN student_id END) AS kindergarten_4_5,
+    COUNT(DISTINCT CASE WHEN age_years BETWEEN 6 AND 12 THEN student_id END) AS age_6_12,
+    COUNT(DISTINCT CASE WHEN age_years >= 13 THEN student_id END) AS age_13_plus
+
+FROM (
+    SELECT
+        sy.student_id,
+
+        -- считаем "исполнившийся" возраст студента на 1 октября (ay.start_date),
+        -- а не просто разницу лет — учитываем, наступил ли день рождения к этой дате
+        CASE
+            -- если день рождения в этом году ещё не наступил к 1 октября — вычитаем 1 год
+            WHEN DATE_ADD(st.birthdate, INTERVAL EXTRACT(YEAR FROM ay.start_date) - EXTRACT(YEAR FROM st.birthdate) YEAR) > ay.start_date
+            THEN (EXTRACT(YEAR FROM ay.start_date) - EXTRACT(YEAR FROM st.birthdate)) - 1
+            -- иначе день рождения уже был — берём разницу лет как есть
+            ELSE EXTRACT(YEAR FROM ay.start_date) - EXTRACT(YEAR FROM st.birthdate)
+        END AS age_years
+
+    FROM student_years sy
+
+    JOIN students st
+        ON st.id = sy.student_id
+
+    JOIN academic_years ay
+        ON ay.id = sy.academic_year_id
+
+    JOIN learning_centers lc
+        ON lc.id = sy.learning_center_id
+
+    WHERE
+        ay.name = {{year_name}}
+        AND (lc.based_type = 0 OR lc.based_type = 2)   -- билингвальные (0) + международные (2) LC
+) t;
+```
+
 ---
 
 ## Общие технические заметки
