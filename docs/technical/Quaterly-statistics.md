@@ -151,13 +151,20 @@ GROUP BY
 SELECT
     -- числитель: сколько всего PACE сдано в LC за квартал
     (SELECT COUNT(*)
+
      FROM student_paces sp
+
      JOIN student_subjects ss ON ss.id = sp.student_subject_id
+
      JOIN student_years sy ON sy.id = ss.student_year_id
+
      JOIN academic_years ay ON ay.id = sy.academic_year_id
+
      JOIN learning_centers lc ON lc.id = sy.learning_center_id
+
      JOIN academic_periods ap ON ap.academic_year_id = ay.id
         AND sp.date BETWEEN ap.start_date AND ap.finish_date
+
      WHERE ay.name = {{year_name}}
        AND lc.name = {{LC}}
        AND ap.name = 'Quarter 1'
@@ -167,11 +174,17 @@ SELECT
     /
     -- знаменатель: сколько студентов посещало LC в этот квартал (та же логика, что в запросе №1)
     (SELECT COUNT(DISTINCT sy.student_id)
+
      FROM student_years sy
+
      JOIN academic_years ay ON ay.id = sy.academic_year_id
+
      JOIN learning_centers lc ON lc.id = sy.learning_center_id
+
      JOIN attendances att ON att.student_year_id = sy.id
+
      JOIN academic_periods ap ON ap.id = att.academic_period_id
+
      WHERE ay.name = {{year_name}}
        AND lc.name = {{LC}}
        AND ap.name = 'Quarter 1'
