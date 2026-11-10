@@ -11,7 +11,7 @@ To assign demerits to a student, you need to do so in the **Goal Check** tab:
 
 https://isotms.ru/goal-check-report/students
 
-![Goal Check View](docs/technical/STMS Description Images/Goal Check Report/Goal-Check-with-DMTs.bmp)
+![Goal Check View](docs/technical/STMS-Description-Images/Goal-Check-Report/Goal-Check-with-DMTs.bmp)
 
 **Goal Check View**
 
