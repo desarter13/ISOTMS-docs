@@ -2,6 +2,19 @@
 
 ## 10.11.2026 Update
 
-Невозможно поставить оценку в будущем. Дату за тест нельзя поставить дальше сегодняшнего дня.
+### Changelog
 
-В настройках предмета поле Transcript Name имеет корректный заголовк (Transcript name, раньше было diploma level)
+#### Supervisor's Card
+
+It is not possible to enter a grade for a future date. The test date cannot be set later than today.
+
+#### SUbject Settings
+
+In the subject settings, the Transcript Name field has the correct label (previously, it was called Diploma Level).
+
+### WIP Bible module
+
+
+
+### WIP Chat
+
